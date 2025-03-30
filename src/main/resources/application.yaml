@@ -1,0 +1,28 @@
+server:
+  port: 8080
+
+
+spring:
+  security:
+    user:
+      name: admin
+      password: 123
+  datasource:
+    url: jdbc:mysql://localhost:3306/identity
+    username: admin
+    password: 123
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+springdoc:
+  api-docs:
+    enabled: true
+  swagger-ui:
+    path: /swagger-ui.html
+    operationsSorter: method
+    disable-swagger-default-url: true
+  override-with-generic-response: false
+
